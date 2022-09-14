@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*global reset of all margin an dpaddings for all HTML elements */
+* {
+    padding: 0;
+    margin: 0
+}
+/*---------------------------Section styles ----------------------------------*/
+.right {
+    border-left: 1px solid #000; /* add a border style */
+    padding: 1em; /* add padding */
+}
+.left, .middle {
+    padding: 1em; /* add padding to both left and middle elements*/
+}
+.left {
+    border-right: 1px solid #000; /* add a border style */
+}
+
+
+/*---------------------------Wrapper styles ----------------------------------*/
+.wrapper {
+    display: grid; /* display as a grid of rows and columns */
+    grid-template-columns: 40% 40% auto; /* set the grid layout column widths -  */
+    grid-gap: 1%; /* set the gap width between the rows and columns */
+    padding: 1%; /* set the padding of the container -  */
+}
+
+
+/*---------------------------Images styles ----------------------------------*/
+img {
+    width: 100%; /* set the width of the image. Image will take up 100% width of available space */
+    height: auto; /* height will automatically resize based on width */
+}
+/*---------------------------Section styles ----------------------------------*/
+.right {
+    border-left: 1px dotted red; /* set a border width, style and colour */
+    padding: 1%; /* set the padding of the container -  */
+}
+.left {
+    border-right: 1px solid red; /* set a border width, style and colour */
+}
+.left, .middle {
+    padding: 1%; /* set the padding of the container -  */
+}
+
+
+/*---------------------------Heading styles ----------------------------------*/
+h1 {
+    padding-left: 1%;
+} /* set the left padding of  h1 -  */
+h3 {
+    padding-top: 4%;
+} /* set the top padding of  h3 -  */
+
+
+/*---------------------------Footer styles ----------------------------------*/
+
+footer {
+	
+	display: flex;
+	justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    width: 100%;  /* set the width of the footer  */
+    height: 15vh; /* set the height of the footer  */
+    color: #fff; /* set the text colour of the footer  */
+	margin-top:3em;
+}
+
+/*---------------------------Media Queries  ----------------------------------*/
+
+@media only screen  and   (max-width:600px){ /* set the following properties and values while display is no wider than 600px */
+	
+.wrapper {
+
+    grid-template-columns: 100%; /* set the grid layout column widths -  */
+}	
+	
+	
+	footer {
+	
+	margin-top:4em; /* change  margin-top value in reponsive mode */
+}
+	
+	
+	.left, .right{border:0;} /* remove border styles in reponsive mode */
+	
+	
+}
